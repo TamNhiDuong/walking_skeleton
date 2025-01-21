@@ -1,3 +1,4 @@
+RUN THE CONTAINER
 Run the project
 ```sh
 docker compose up --build
@@ -17,4 +18,21 @@ Type "help" for help.
 database=# \dt
 Did not find any relations.
 database=# \quit
+```
+
+RUN MANUTALLY
+Run the Deno Server-side 
+```sh
+deno run --allow-env --allow-net --unstable --watch app-run.js
+```
+
+Run the Svelte Client-side
+```sh
+deno install --allow-scripts
+deno run dev --open
+```
+
+Create and run e2e test manually
+```sh
+deno run -A npm:create-playwright@latest e2e-tests
 ```
